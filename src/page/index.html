@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/src/css/style.css">
+      <link href="/dist/output.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-...." crossorigin="anonymous" />
+      <script src="/src/typescript/index.js"></script>
+      <title>Portfólio ThC</title>
+</head>
+
+<body>
+      <nav class="bg-white-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                  <div class="relative flex h-16 items-center justify-between">
+                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                              <!-- Mobile menu button-->
+                              <button type="button"
+                                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                    aria-controls="mobile-menu" aria-expanded="false">
+                                    <span class="absolute -inset-0.5"></span>
+                                    <span class="sr-only">Open main menu</span>
+                                    <!--
+                      Icon when menu is closed.
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                          stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                    <!--
+                      Icon when menu is open.
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                          stroke="currentColor" aria-hidden="true">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                              </button>
+                        </div>
+                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                              <div class="flex flex-shrink-0 items-center">
+                                    <img class="h-8 w-auto"
+                                          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                          alt="Your Company">
+                              </div>
+                              <div class="hidden sm:ml-6 sm:block">
+                                    <div class="flex space-x-4">
+                                          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                          <a href="#idDashboard"
+                                                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                                aria-current="page">Dashboard</a>
+                                          <a href="#idExperiencia"
+                                                class="text-violet-600 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
+                                                style="color: rgb(124 58 237); font-weight: 200;">Experince</a>
+                                          <a href="#idProjects"
+                                                class="hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
+                                                style="color: rgb(124 58 237);">Projects</a>
+                                    </div>
+                              </div>
+                        </div>
+                        <div
+                              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                              <!-- Profile dropdown -->
+                              <div class="relative ml-3">
+                                    <div>
+                                          <button type="button"
+                                                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                                <span class="absolute -inset-1.5"></span>
+                                                <span class="sr-only">Open user menu</span>
+                                                <img class="h-8 w-8 rounded-full"
+                                                      src="/img/287071000_1176389019810660_2742082174166117134_n.jpeg"
+                                                      alt="foto-perfil">
+                                          </button>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                  <div class="space-y-1 px-2 pb-3 pt-2">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="#idDashboard" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                              aria-current="page">Dashboard</a>
+                        <a href="#idExperiencia"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Experince</a>
+                        <a href="#idProjects"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+                  </div>
+            </div>
+      </nav>
+      <section class="hero is-white has-text-centered">
+            <div class="hero-body" id="idDashboard">
+                  <div class="container">
+                        <div class="columns is-centered">
+                              <div class="column">
+                                    <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">
+                                          Backend Developer, Software Engineer</h1>
+                                    <h2 class="subtitle is-size-4-tablet">Eu construo sistemas robustos e eficientes, e
+                                          amo um desafio.
+                                          <br> Eu uso minha criatividade para resolver problemas complexos, e adoro ver
+                                          minhas soluções funcionando.
+                                    </h2>
+                                    <img class="avatar" src="/img/mf-avatar.svg">
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="hero-foot">
+                  <div class="container"><img class="is-bottom" src="https://mattfarley.ca/img/hero-devices.svg"
+                              style="width: 70%; margin: 0 auto;"></div>
+            </div>
+      </section>
+
+      <section class="section is-medium is-primary has-text-centered is-long"
+            style="margin-top: 1.2rem; background-color: #6E07F3;">
+            <div class="container">
+                  <div class="columns is-centered">
+                        <div class="column is-three-fifths seila"
+                              style="text-align: center; padding-top:8%; padding-bottom: 350px;">
+                              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile"
+                                    style="color: white; font-size: 30px;">
+                                    Olá, meu nome é Thiago. Prazer em conhecê-lo
+                              </h1>
+                              <h2 class="subtitle is-size-5-desktop has-text-weight-normal" style="color: aliceblue;">
+                                    Desde que comecei minha jornada como desenvolvedor <strong>Back-end</strong>, há
+                                    mais de 3 anos.
+                                    Cursando bacharel em Engenharia de Software, pela UNIFAE(2022).
+                                    <br>Realização de projetos pessoais utilizando Java, React.js e Spring, com o objetivo
+                                    de inovar e me aprofundar nessa área.
+                                    <br>Também venho me especializando, realizando cursos voltados para programação
+                                    relacionados :Typescript, Nestjs, React.js, Java, AWS, Spring Boot e Docker...
+                              </h2>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <section class="secao skills has-text-centered" id="idExperiencia">
+            <div class="box">
+                  <div class="texto" style="width: 550px;">
+                        <img src="/icons/planning_889016.png" alt="" style="width: 50px; ">
+                        <h1 style="font-weight: bold; padding: 20px 0;">Design Patterns</h1>
+                        <p>Gosto de aplicar <strong>Padrões de Design</strong> para criar soluções a partir do boas
+                              práticas e abordagens testadas e comprovadas para resolver problemas específicos durante o
+                              desenvolvimento de software, garantindo uma abordagem estruturada e eficiente.</p>
+                        <h2 class="h2-box">Livro:</h2>
+                        <p>Gang of Four Book</p>
+                        <h2 class="h2-box">Principais design patterns que usei:</h2>
+                        <ul>
+                              <li>Abstract Factory</li>
+                              <li>Builder</li>
+                              <li>Factory Method</li>
+                        </ul>
+                  </div>
+                  <div class="texto" style="border-left: 1px solid rgba(128, 128, 128, 0.233); width: 550px;">
+                        <img src="/icons/layers_9430095.png" alt="" style="width: 50px;">
+                        <h1 style="font-weight: bold; padding: 20px 0;">Back-end developer</h1>
+                        <p>Desenvolvo a lógica e a estrutura que sustentam as ideias, construindo soluções sólidas e
+                              eficientes no coração do sistema.</p>
+                        <h2 class="h2-box">Coisas que gosto de projetar:</h2>
+                        <p>API, Web, Aplicações, Projetos</p>
+                        <h2 class="h2-box">Linguagens e Framework:</h2>
+                        <ul>
+                              <li>Java - <b>Spring-Boot</b></li>
+                              <li>TypeScript - <b>Nestjs</b>, <b>Node</b>, <b>React.js</b></li>
+                              <li>PHP - <b>Laravel</b></li>
+                              <li>Python</li>
+                              <li>Git</li>
+                              <li>HTML/CSS</li>
+                        </ul>
+                        <h2 class="h2-box">Banco de Dados:</h2>
+                        <ul>
+                              <li>Postgresql</li>
+                              <li>MySQL</li>
+                        </ul>
+                        <h2 class="h2-box">Ferramentas:</h2>
+                        <ul>
+                              <li>Swagger</li>
+                              <li>Postman</li>
+                              <li>Insomnia</li>
+                              <li>GitHub</li>
+                        </ul>
+                  </div>
+                  <div class="texto" style="border-left: 1px solid rgba(128, 128, 128, 0.233); width: 550px;">
+                        <img src="/icons/ship_8893044.png" alt="" style="width: 50px;">
+                        <h1 style="font-weight: bold; padding: 20px 0;">Dokcer</h1>
+                        <p>Utilizo Docker para criar ambientes consistentes e isolados, garantindo portabilidade e
+                              facilitando a orquestração de serviços em ambientes de backend.</p>
+                        <h2 class="h2-box">O que já fiz:</h2>
+                        <p>Container, Imagem-Postgres</p>
+                        <h2 class="h2-box">Ferramentas:</h2>
+                        <ul>
+                              <li>Docker-Desktop</li>
+                        </ul>
+                  </div>
+            </div>
+      </section>
+
+      <section class="section is-medium is-primary has-text-centered is-long"
+            style="margin-top: 1.2rem; background-color: #6E07F3;">
+            <div class="container">
+                  <div class="columns is-centered">
+                        <div class="column is-three-fifths seila"
+                              style="text-align: center; padding-top:8%; padding-bottom: 300px;">
+                              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile"
+                                    style="color: white; font-size: 30px;" id="idProjects">Meus projetos</h1>
+                              <h2 style="font-size: 1.25rem; color:#ffff; font-weight: bold;">Aqui estão alguns projetos
+                                    que realizei. Quer ver mais? <a style="color: rgb(253, 51, 51);"
+                                          href="mailto:thiagocarretero433@gmail.com">Envie-me um e-mail</a>.</h2>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <section style="margin-top: -12rem;" class="media-grid">
+            <div class="container-projetos">
+
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/spring.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">API-Bolsa-Valores</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" onclick="redirectToRepo()" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <!-- <a href="https://github.com/Thiago-CSantos/ApiBolsaValores">repositorio.com</a> -->
+                              repositorio.com
+                        </span>
+
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/spring.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">API-Envio-Email</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/Api-EnvioEmail"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/react.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">Aplicacao-Java-Spring-React</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/Aplicacao-Fullstack-Java-Spring-React"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/spring.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">API-RestFULL</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/ApiRestFULL"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/php.svg" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">PHP-Laravel</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/PHP-Laravel"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/icons8-flutter-48.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">Aplicativo de Despesas</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/Flutter-appDespesas"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/icons8-kotlin-48.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">Aplicativo Gastos Viagem</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/Aplicativo-GastoViagem"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/java.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">Design-Patterns em Java</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/Design-Patterns"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+                  <div class="card">
+                        <div class="img-h2">
+                              <img src="/icons/spring.png" alt="icon-spring" style="width:50px;">
+                              <h2 style="font-size: 1.50rem;">Back-End-AmeDigital</h2>
+                        </div>
+                        <p>A powerful, easy-to-configure form backend for designers and developers.</p>
+                        <span class="span-repos" style="cursor: pointer;" id="linkToRepo">
+                              <img src="/icons/github.png" alt="iconGitHub"
+                                    style="width: 30px; text-align: center; margin-right: 2%;">
+                              <a href="https://github.com/Thiago-CSantos/back-end-challenge-AmeDigital"
+                                    target="_blank">repositorio.com</a>
+                        </span>
+                  </div>
+            </div>
+      </section>
+
+      <section>
+            <div class="container-whats">
+                  <h1 style="font-size: 26px;">Interessado em colaborar comigo?</h1>
+                  <h2 style="font-weight: 400; line-height: 50px;">Estou sempre aberto para discutir trabalhos e
+                        projetos ou oportunidades de parceria.</h2>
+                  <div class="whats">
+                        <a href="https://api.whatsapp.com/send?phone=19989650120" class="botao-a" target="_blank">
+                              <span class="icone">
+                                    <img src="/icons/chat-box.png" alt="chatbox">
+                              </span>
+                              <span style="padding-left: 5px;">Inicie uma conversa</span>
+                        </a>
+                  </div>
+            </div>
+      </section>
+
+      <footer>
+            <section class="section is-medium is-primary has-text-centered is-long" style="background-color: #6E07F3;">
+                  <div class="container">
+                        <div class="columns is-centered">
+                              <div class="column is-three-fifths seila"
+                                    style="text-align: center; padding-top:8%; padding-bottom: 50px;">
+                                    <img src="/img/lizard.png" alt="" style="margin: auto;">
+
+                                    <h2 style="font-size: 1.25rem; color:#ffffffb0;">
+                                          Vivendo, aprendendo e <br> subindo de nível um dia de <br>cada vez.
+                                    </h2>
+
+                                    <div class="centralizar">
+                                          <a href="https://www.linkedin.com/in/thiago-santos-thc/" target="_blank">
+                                                <p class="circulo"><img src="/img/linkedin.png" alt=""></p>
+                                          </a>
+                                          <a href="https://www.instagram.com/__thcx.y__/" target="_blank">
+                                                <p class="circulo"><img src="/img/instagram.png" alt=""></p>
+                                          </a>
+                                          <a href="https://api.whatsapp.com/send?phone=19989650120" target="_blank">
+                                                <p class="circulo"><img src="/img/whatsapp.png" alt=""></p>
+                                          </a>
+                                          <a href="mailto:thiagocarretero433@gmail.com" target="_blank">
+                                                <p class="circulo"><img src="/img/email.png" alt=""></p>
+                                          </a>
+
+                                    </div>
+                                    <h2 style="font-size: 1.25rem; color:#ffffffb0; margin-top: 10px;">
+                                          Feito à mão por mim @Thiago-CSantos
+                                    </h2>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+      </footer>
+</body>
+
+</html>
