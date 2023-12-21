@@ -243,3 +243,28 @@ img {
             margin-bottom: 50rem;
       }
 }
+
+@media screen and (max-width:860px) {
+      
+      .texto{
+            padding: 0;
+      }
+
+      .media-grid{
+            margin-top: 0;
+      }
+      
+      .container-projetos{
+            margin-bottom: 0;
+            display: inline-block;
+            margin: 0;
+      }
+
+      .botao-a{
+            width: 100%;
+      }
+      .botao-a:hover{
+            background-color: #ffffff;
+            color: #0a0a0a;
+      }
+}
